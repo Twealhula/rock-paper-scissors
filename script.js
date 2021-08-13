@@ -1,3 +1,6 @@
+// Twealhula: 08/08/2021 
+// last edit:
+
 function computerPlay() { //randomly selects 'Rock', 'Paper', or 'Scissors'
     
     let x = Math.floor(Math.random() * 3); //generate random number (0-2)
@@ -13,8 +16,8 @@ function computerPlay() { //randomly selects 'Rock', 'Paper', or 'Scissors'
 
 function playRound(playerSelection, computerSelection) { //take input of player and evaluate against random selection of computer to determine an outcome
 
-    let x = playerSelection.toLowerCase(); //convert player input string into lowercase and set as local x
-    let y = computerSelection; //set computer generated input as local y
+    const x = playerSelection.toLowerCase(); //convert player input string into lowercase and set as local x
+    const y = computerSelection; //set computer generated input as local y
 
 //If selection is the same, then "Draw"
 //Permutations for "Win" case: ROCK AND SCISSORS, SCISSORS AND PAPER, PAPER AND ROCK
@@ -24,7 +27,8 @@ function playRound(playerSelection, computerSelection) { //take input of player 
     if (x === y) {
         console.log("It's a Draw!")
         return 0;
-    }   else if (x === "rock" && y === "scissors" || x === "scissors" && y === "paper" || x === "paper" && y === "rock" ) {
+    }   else if (x === "rock" && y === "scissors" || x === "scissors" && 
+	y === "paper" || x === "paper" && y === "rock" ) {
         console.log(`You Win! ${x} beats ${y}`)
         return 1;
     }   else {
